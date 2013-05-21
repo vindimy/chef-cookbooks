@@ -6,4 +6,4 @@ default[:app_tipbot][:firewall_rules] = [
   {:name => "ssh", :port => 22, :protocol => :tcp, :source => nil},
   {:name => "http", :port => 80, :protocol => :tcp, :source => nil},
   {:name => "https", :port => 443, :protocol => :tcp, :source => nil},
-  {:name => "mysql", :port => 3306, :protocol => :tcp, :source => '10.0.0.0/24'} ]
+  {:name => "mysql", :port => 3306, :protocol => :tcp, :source => '10.0.0.0/8'} ]
