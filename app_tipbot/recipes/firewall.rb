@@ -1,5 +1,9 @@
 include_recipe "firewall"
 
+package "ufw" do
+  action :install
+end
+
 node[:app_tipbot][:firewall_rules].each do |rule|
   firewall_rule rule[:name] do
     port rule[:port]
