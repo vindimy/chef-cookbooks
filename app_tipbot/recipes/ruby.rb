@@ -9,9 +9,15 @@
 
 include_recipe "ruby"
 
-node[:app_tipbot][:gems].each do |gem|
+node[:app_tipbot][:ruby_gems].each do |gem|
   r = gem_package gem do
     action :nothing
   end
   r.run_action(:install)
+end
+
+node[:app_tipbot][:ruby_packages].each do |pkg|
+  package pkg do
+    action :install
+  end
 end
