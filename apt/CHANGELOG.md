@@ -1,3 +1,37 @@
+## v2.1.0:
+
+- [COOK-3426]: cacher-ng fails with restrict_environment set to true
+- [COOK-2859]: cacher-client executes out of order
+- [COOK-3052]: Long GPG keys are downloaded on every run
+- [COOK-1856]: apt cookbook should match keys without case sensitivity
+- [COOK-3255]: Attribute name incorrect in README
+- [COOK-3225]: Call use_inline_resources only if defined
+- [COOK-3386]: Cache dir for apt-cacher-ng
+- [COOK-3291]: apt_repository: enable usage of a keyserver on port 80
+- Greatly expanded test coverage with ChefSpec and Test-Kitchen
+
+## v2.0.0:
+
+### Bug
+
+- [COOK-2258]: apt: LWRP results in error under why-run mode in apt 1.9.0 cookbook
+
+## v1.10.0:
+
+### Improvement
+
+- [COOK-2885]: Improvements for apt cache server search
+
+### Bug
+
+- [COOK-2441]: Apt recipe broken in new chef version
+- [COOK-2660]: Create Debian 6.0 "squeeze" specific template for
+  apt-cacher-ng
+
+## v1.9.2:
+
+* [COOK-2631] - Create Ubuntu 10.04 specific template for apt-cacher-ng
+
 ## v1.9.0:
 
 * [COOK-2185] - Proxy for apt-key
