@@ -1,3 +1,36 @@
+## v2.0.0:
+
+### Bug
+
+- [COOK-3306]: Multiple Memory Leaks in Application Cookbook
+
+## v1.2.4:
+
+### Bug
+
+- [COOK-2747]: celerycam configuration is not suitable for multiple
+  node celery installation
+- [COOK-2766]: pip does not use `deploy_key` in  django ressource of
+  `application_python`
+
+## v1.2.2:
+
+### Bug
+
+- [COOK-2796]: celery provider tries to case switch on 'queue'
+  parameter instead of 'queues' parameter
+
+## v1.2.0:
+
+### Improvement
+
+- [COOK-2611]: Celery LWRP should configure which queues a celeryd
+  worker binds to
+
+### Bug
+
+- [COOK-2599]: gunicorn provider fails if no `node['cpu']['total']`
+
 ## v1.1.0:
 
 * [COOK-2330] - celeryconfig.py.erb tries to use non-existant String#upper method
