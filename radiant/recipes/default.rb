@@ -54,10 +54,10 @@ execute "radiant_generate" do
   user "railsdev"
 end
 
-web_app "#{appname}" do
+web_app appname do
   docroot "/srv/#{appname}/current/public"
   template "#{appname}.conf.erb"
-  server_name "#{appname}.#{node[:domain]}"
-  server_aliases [ "#{appname}", node[:hostname] ]
+  server_name "#{appname}.#{node['domain']}"
+  server_aliases [ appname, node['hostname'] ]
   rails_env node['radiant']['environment']
 end

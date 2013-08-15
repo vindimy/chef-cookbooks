@@ -33,8 +33,8 @@
 
 app = data_bag_item("apps", "radiant")
 
-node.set[:radiant][:db_bootstrap] = <<EOS
-yes | rake #{node[:radiant][:environment]} db:bootstrap \
+node.set['radiant']['db_bootstrap'] = <<EOS
+yes | rake #{node['radiant']['environment']} db:bootstrap \
 ADMIN_NAME=Administrator \
 ADMIN_USERNAME=admin \
 ADMIN_PASSWORD=radiant \
@@ -42,7 +42,7 @@ DATABASE_TEMPLATE=empty.yml
 EOS
 
 execute "db_bootstrap" do
-  command node[:radiant][:db_bootstrap]
+  command node['radiant']['db_bootstrap']
   cwd "#{app['deploy_to']}/current"
   creates "#{app['deploy_to']}/current/tmp/radiant_config_cache.txt"
   ignore_failure true

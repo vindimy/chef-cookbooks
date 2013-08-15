@@ -1,9 +1,10 @@
+name              "radiant"
 maintainer        "Opscode, Inc."
 maintainer_email  "cookbooks@opscode.com"
 license           "Apache 2.0"
 description       "Installs radiant from Git repository"
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version           "1.0.1"
+version           "1.0.2"
 
 recipe "radiant", "Installs Radiant CMS"
 recipe "radiant::db_bootstrap", "Bootstrap the Radiant database, used with application cookbook (destructive)"
