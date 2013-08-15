@@ -13,7 +13,8 @@
     "php": ">= 0.0.0",
     "openssl": ">= 0.0.0",
     "apache2": ">= 0.99.4",
-    "mysql": ">= 1.0.5"
+    "mysql": ">= 1.0.5",
+    "build-essential": ">= 0.0.0"
   },
   "recommendations": {
   },
@@ -186,5 +187,5 @@
   "recipes": {
     "WordPress": "Installs and configures WordPress LAMP stack on a single system"
   },
-  "version": "1.0.0"
+  "version": "1.1.2"
 }
