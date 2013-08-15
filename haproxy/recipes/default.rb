@@ -17,9 +17,7 @@
 # limitations under the License.
 #
 
-package "haproxy" do
-  action :install
-end
+include_recipe "haproxy::install_#{node['haproxy']['install_method']}"
 
 cookbook_file "/etc/default/haproxy" do
   source "haproxy-default"
@@ -29,12 +27,16 @@ cookbook_file "/etc/default/haproxy" do
   notifies :restart, "service[haproxy]"
 end
 
-template "/etc/haproxy/haproxy.cfg" do
+template "#{node['haproxy']['conf_dir']}/haproxy.cfg" do
   source "haproxy.cfg.erb"
   owner "root"
   group "root"
   mode 00644
   notifies :reload, "service[haproxy]"
+  variables(
+    :defaults_options => haproxy_defaults_options,
+    :defaults_timeouts => haproxy_defaults_timeouts
+  )
 end
 
 service "haproxy" do
