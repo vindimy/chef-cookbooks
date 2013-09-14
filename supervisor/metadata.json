@@ -1,5 +1,6 @@
 {
   "name": "supervisor",
+  "version": "0.4.8",
   "description": "Installs supervisor and provides resources to configure services",
   "long_description": "",
   "maintainer": "Noah Kantrowitz",
@@ -28,6 +29,5 @@
   },
   "recipes": {
     "supervisor": "Installs and configures supervisord"
-  },
-  "version": "0.4.4"
+  }
 }
